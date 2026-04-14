@@ -1,0 +1,19 @@
+<section class="panel">
+  <h2>Справка за дължими суми (PDF)</h2>
+
+  <p class="description">
+    Качете Excel файл и приложението ще сумира сумите по апартамент и ще изчисли броя месеци.
+  </p>
+  <p class="description">
+    Примерен файл: <a href="assets/Taxes_Table.xlsx" download>Taxes_Table.xlsx</a>
+  </p>
+
+  <label class="file-label" for="pdf-excel">Избери Excel файл</label>
+  <input id="pdf-excel" type="file" accept=".xlsx,.xls" (change)="onFileChange($event)" />
+
+  @if (selectedFileName) {
+    <p class="file-name">Файл: {{ selectedFileName }}</p>
+  }
+
+  <button type="button" (click)="generatePdf()">Генерирай PDF</button>
+</section>

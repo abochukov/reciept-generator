@@ -1,0 +1,16 @@
+<section class="panel">
+  <h2>Генератор на бележки (Word)</h2>
+
+  <label class="file-label" for="word-excel">Избери Excel файл</label>
+  <input id="word-excel" type="file" accept=".xlsx,.xls" (change)="onFileChange($event)" />
+
+  <p class="description">
+    Примерен файл: <a href="assets/Reciept_Template.xlsx" download>Reciept_Template.xlsx</a>
+  </p>
+
+  @if (selectedFileName) {
+    <p class="file-name">Файл: {{ selectedFileName }}</p>
+  }
+
+  <button type="button" (click)="generateWordFile()">Генерирай Word</button>
+</section>

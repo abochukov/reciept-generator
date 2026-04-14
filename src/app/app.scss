@@ -1,0 +1,48 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #f7fafc 0%, #eef2f7 100%);
+}
+
+.layout {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 2rem 1rem 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header h1 {
+	margin: 0;
+	color: #0f172a;
+}
+
+.header p {
+	margin: 0.5rem 0 1.25rem;
+	color: #334155;
+}
+
+.tabs {
+	display: flex;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+}
+
+.tab {
+	text-decoration: none;
+	padding: 0.55rem 0.95rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 999px;
+	color: #0f172a;
+	background: #ffffff;
+}
+
+.tab.active {
+	background: #0f766e;
+	border-color: #0f766e;
+	color: #ffffff;
+}
+
+.content {
+	padding-top: 0.4rem;
+}

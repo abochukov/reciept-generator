@@ -1,0 +1,44 @@
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8dde6;
+  border-radius: 12px;
+  padding: 1.25rem;
+  max-width: 680px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.description {
+  color: #334155;
+}
+
+.file-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type='file'] {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.file-name {
+  margin: 0.5rem 0;
+  color: #4b5563;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  background: #0f766e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #115e59;
+}

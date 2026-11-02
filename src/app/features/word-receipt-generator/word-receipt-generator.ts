@@ -51,7 +51,7 @@ export class WordReceiptGeneratorComponent {
       htmlContent += `
         <div style="margin-bottom: 40px; page-break-after: always;">
           <p style="text-align: center; font-size: 16pt;"><strong>${title} на ап.${apartmentNumber}</strong></p>
-          <p style="font-size: 14pt;">Частта от общите разходи на вх.Д, бл.628, Люлин, полагаща се на ап.${apartmentNumber} за времето от 01.02.2026 до 01.03.2026 (1м) на обща стойност ${amount} евро е платена.</p>
+          <p style="font-size: 14pt;">Частта от общите разходи на вх.Д, бл.628, Люлин, полагаща се на ап.${apartmentNumber} за времето от 01.09.2026 до 01.10.2026 (1м) на обща стойност ${amount} евро е платена.</p>
           <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 14pt;">
             <tr>
               <td align="left">София, ${dateStr}</td>

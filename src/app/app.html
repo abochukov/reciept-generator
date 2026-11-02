@@ -2,6 +2,7 @@
   <header class="header">
     <h1>Receipt Generator</h1>
     <p>Инструменти за обработка на плащания от Excel</p>
+    <p>Дата: {{today | date: 'dd.MM.yyyy'}}</p>
   </header>
 
   <nav class="tabs" aria-label="Навигация">
@@ -15,6 +16,15 @@
     </a>
     <a routerLink="/debt-report" routerLinkActive="active" class="tab">
       PDF справка за дългове
+    </a>
+    <a routerLink="/angular-lab" routerLinkActive="active" class="tab">
+      Angular latest lab
+    </a>
+    <a routerLink="/counter-lab" routerLinkActive="active" class="tab">
+      Counter lab
+    </a>
+    <a routerLink="/confirmation-mail" routerLinkActive="active" class="tab">
+      Send mail
     </a>
   </nav>
 

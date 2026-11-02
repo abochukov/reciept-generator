@@ -1,0 +1,18 @@
+<div>
+    <p>Counter with signals</p>
+
+    <p>count value: {{ count() }}</p>
+    <p>Step: {{ step() }}</p>
+    <p>Double count: {{ doubleCount() }}</p>
+    <p>Is even: {{ isEven() }}</p>
+    <p>History: <ul>
+    @for (item of history(); track $index) {
+        <li>{{ item }}</li>
+        }
+    </ul>
+
+    <div>
+        <button (click)="increment()">Step +</button>
+        <button (click)="decrement()">Step -</button>
+    </div>
+</div>

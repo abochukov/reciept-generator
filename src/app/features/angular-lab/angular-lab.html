@@ -1,0 +1,71 @@
+<section class="panel">
+  <h2>Angular Latest Lab</h2>
+  <p class="description">
+    Демонстрация на signals, computed, effect, &#64;if, &#64;for, &#64;switch и &#64;defer.
+  </p>
+
+  <div class="controls">
+    <input #taskInput type="text" placeholder="Нова задача..." />
+    <button type="button" (click)="addTask(taskInput)">Добави</button>
+  </div>
+
+  <div class="filters">
+    <button type="button" [class.active]="filter() === 'all'" (click)="setFilter('all')">Всички</button>
+    <button type="button" [class.active]="filter() === 'active'" (click)="setFilter('active')">Активни</button>
+    <button type="button" [class.active]="filter() === 'done'" (click)="setFilter('done')">Готови</button>
+  </div>
+
+  <div class="search-row">
+    <label for="search">Търсене</label>
+    <input
+      id="search"
+      type="text"
+      [value]="search()"
+      (input)="onSearch($any($event.target).value)"
+      placeholder="Филтрирай по текст"
+    />
+  </div>
+
+  @switch (filter()) {
+    @case ('all') {
+      <p class="hint">Показани са всички задачи.</p>
+    }
+    @case ('active') {
+      <p class="hint">Показани са само активните задачи.</p>
+    }
+    @case ('done') {
+      <p class="hint">Показани са само готовите задачи.</p>
+    }
+  }
+
+  @if (filteredTasks().length === 0) {
+    <p class="empty">Няма съвпадащи задачи.</p>
+  } @else {
+    <ul class="task-list">
+      @for (task of filteredTasks(); track task.id) {
+        <li [class.done]="task.done">
+          <label>
+            <input type="checkbox" [checked]="task.done" (change)="toggleTask(task.id)" />
+            <span>{{ task.title }}</span>
+          </label>
+          <button type="button" class="danger" (click)="removeTask(task.id)">Премахни</button>
+        </li>
+      }
+    </ul>
+  }
+
+  <div class="summary">
+    <strong>Общо:</strong> {{ summary().total }} |
+    <strong>Активни:</strong> {{ summary().active }} |
+    <strong>Готови:</strong> {{ summary().done }}
+  </div>
+
+  @defer (on timer(400ms)) {
+    <aside class="defer-card">
+      <h3>Lazy блок с &#64;defer</h3>
+      <p>Този панел се рендерира отложено и е добър за тежки секции/графики.</p>
+    </aside>
+  } @placeholder {
+    <p class="defer-placeholder">Подготвям отложеното съдържание...</p>
+  }
+</section>

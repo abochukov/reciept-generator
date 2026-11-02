@@ -1,0 +1,5 @@
+<p>receipt-confirmation-mail works!</p>
+
+@for(mail of mails; track mail.apartament) {
+    <p>{{mail.apartament}} - {{mail.mail}} - <button>Send Mail</button></p>
+}
